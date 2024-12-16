@@ -43,5 +43,7 @@ const maxProfit = (stockPrices) => {
 };
 /* Solve using Greedy Algorithm */
 
+console.time("maxProfit");
 console.log("Case 1 >>>", maxProfit([7, 1, 5, 3, 6, 4]));
 console.log("Case 2 >>>", maxProfit([7, 6, 4, 3, 1]));
+console.timeEnd("maxProfit");
