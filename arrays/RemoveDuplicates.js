@@ -39,7 +39,6 @@ const removeDuplicates = (nums) => {
     }
   }
 
-  console.log("first", nums);
   return i + 1;
 };
 
