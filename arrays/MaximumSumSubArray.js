@@ -41,18 +41,33 @@ const array2 = [5, 4, -1, 7, 8];
 const maximumSumSubArray = (nums) => {
   let sum = 0;
   let maxSum = nums[0];
+  let startIdx = 0;
+  let endIdx = 0;
 
   for (let i = 0; i < nums.length; i++) {
     sum += nums[i];
     if (sum > maxSum) {
       maxSum = sum;
+      endIdx = i;
     }
     if (sum < 0) {
       sum = 0;
+      startIdx = i + 1;
     }
   }
-  return maxSum;
+
+  return {
+    sum: maxSum,
+    subArray: nums.slice(startIdx, endIdx + 1),
+  };
 };
+// Time Complexity --> O(n)
+// Space Complexity --> O(k)
+// sum, maxSum, startIdx, and endIdx are scalar variables, so they use 𝑂(1).
+// The space complexity depends on the variables used and the result stored.
+// The slice() method creates a new array for the result, which takes 𝑂(𝑘)
+// O(k) space, where 𝑘 is the size of the resulting subarray.
+
 /* Optimized Approch */
 
 console.log("Case 1 >>>", maximumSumSubArray(array1));
