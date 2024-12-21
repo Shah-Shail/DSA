@@ -45,5 +45,5 @@ const isEmpty = (stack) => {
 // Space Complexity = O(n)
 
 console.log("Case 1 >>>", checkValidParentheses("()"));
-console.log("Case 2 >>>", checkValidParentheses("([]fds{})"));
+console.log("Case 2 >>>", checkValidParentheses("([]hello{hello})"));
 console.log("Case 3 >>>", checkValidParentheses("(]"));

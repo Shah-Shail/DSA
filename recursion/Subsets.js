@@ -30,4 +30,4 @@ const findSubsets = (nums) => {
 };
 
 console.log("Case 1 >>>>>", findSubsets([1, 2, 3]));
-// console.log("Case 1 >>>>>", findSubsets([0]));
+console.log("Case 1 >>>>>", findSubsets([0]));
