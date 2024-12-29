@@ -17,7 +17,7 @@ const array4 = [9, 4, 9, 8, 4];
 
 /* Optimised Approch */
 const intersectionTwoArray = (nums1, nums2) => {
-  let intetsectedArr = [];
+  let intersectedArr = [];
   let numObj = {};
 
   for (let i = 0; i < nums1.length; i++) {
@@ -28,12 +28,12 @@ const intersectionTwoArray = (nums1, nums2) => {
 
   for (let j = 0; j < nums2.length; j++) {
     if (numObj[nums2[j]]) {
-      intetsectedArr.push(nums2[j]);
+      intersectedArr.push(nums2[j]);
       delete numObj[nums2[j]];
     }
   }
 
-  return intetsectedArr;
+  return intersectedArr;
 };
 // Time Complexity --> O(n1 + n2)
 // Space Complexity --> O(n1)
